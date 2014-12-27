@@ -1,0 +1,2 @@
+Cordova-Locale-Plugin
+=====================
