@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin
+xmlns="http://www.phonegap.com/ns/plugins/1.0"
+xmlns:android="http://schemas.android.com/apk/res/android"
+id="me.hanul.cordova.locale"
+version="0.0.1">
+	<name>Cordova Locale Plugin</name>
+	<author>Hanul</author>
+	<license>MIT</license>
+	<repo>https://github.com/Hanul/Cordova-Locale-Plugin.git</repo>
+	<issue>https://github.com/Hanul/Cordova-Locale-Plugin/issues</issue>
+	<js-module src="www/Locale.js" name="Locale">
+		<clobbers target="Locale" />
+	</js-module>
+	<platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="CordovaLocalePlugin">
+				<param name="android-package" value="me.hanul.cordova.locale.CordovaLocalePlugin" />
+			</feature>
+		</config-file>
+		<source-file src="src/me/hanul/cordova/locale/CordovaLocalePlugin.java" target-dir="src/me/hanul/cordova/locale" />
+	</platform>
+</plugin>
